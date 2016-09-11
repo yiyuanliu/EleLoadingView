@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.yiyuanliu.sample.MainActivity"
+    android:paddingBottom="8dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.yiyuanliu.eleloadingview.EleLoadingView
+            android:id="@+id/loading1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:iconList="@array/emojis"
+            app:rotate="true"
+            android:visibility="visible"/>
+
+        <com.yiyuanliu.eleloadingview.EleLoadingView
+            android:layout_width="match_parent"
+            android:id="@+id/loading2"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <com.yiyuanliu.eleloadingview.EleLoadingView
+            android:id="@+id/loading3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:iconList="@array/acts"
+            android:visibility="gone"/>
+
+        <com.yiyuanliu.eleloadingview.EleLoadingView
+            android:id="@+id/loading4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:icon="@drawable/water"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="iconWidth   "
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"/>
+        <SeekBar
+            android:id="@+id/icon_width"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="48"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="iconHeight  "
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"/>
+        <SeekBar
+            android:id="@+id/icon_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="48"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="jumpHeight  "
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"/>
+        <SeekBar
+            android:id="@+id/jump_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="64"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="shadowMax   "
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"/>
+        <SeekBar
+            android:id="@+id/shadow_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="150"
+            android:progress="100"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="shadowMix   "
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"/>
+        <SeekBar
+            android:id="@+id/shadow_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="150"
+            android:progress="40"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="jumpDuration"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"/>
+        <SeekBar
+            android:id="@+id/jump_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="500"
+            android:progress="280"/>
+    </LinearLayout>
+
+</LinearLayout>

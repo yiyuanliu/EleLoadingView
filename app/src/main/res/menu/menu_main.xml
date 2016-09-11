@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="emoji"
+        android:id="@+id/emoji"/>
+    <item android:title="food"
+        android:id="@+id/food"/>
+    <item android:title="act"
+        android:id="@+id/act"/>
+    <item android:title="water"
+        android:id="@+id/water"/>
+</menu>

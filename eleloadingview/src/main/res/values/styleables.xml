@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EleLoadingView">
+        <attr name="icon" format="reference"/>
+        <attr name="iconList" format="reference"/>
+        <attr name="iconWidth" format="dimension|reference"/>
+        <attr name="iconHeight" format="dimension|reference"/>
+        <attr name="jumpHeight" format="dimension|reference"/>
+        <attr name="shadowMax" format="float"/>
+        <attr name="shadowMin" format="float"/>
+        <attr name="shadowColor" format="color|reference"/>
+        <attr name="rotate" format="boolean"/>
+    </declare-styleable>
+</resources>
