@@ -7,7 +7,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.CompoundButton;
 import android.widget.SeekBar;
+import android.widget.Switch;
 
 import com.yiyuanliu.eleloadingview.EleLoadingView;
 
@@ -141,6 +143,16 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+
+        final Switch rotate = (Switch) findViewById(R.id.rotate);
+        rotate.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                for (EleLoadingView eleLoadingView: eleLoadingViews) {
+                    eleLoadingView.setRotate(isChecked);
+                }
             }
         });
 
