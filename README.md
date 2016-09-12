@@ -4,9 +4,11 @@ A beautiful loading view for android inspired by Ele.me and dribbble
 
 ![](./screenshots/screenshot.gif)
 
-## how to use it 
+[Here is the emoji resources I used in the screenshot.](https://github.com/yiyuanliu/EleLoadingView/tree/master/emoji)
 
-### import
+## How to use it 
+
+### Import
 
 Add it in your root build.gradle at the end of repositories:
 ```
@@ -25,9 +27,9 @@ dependencies {
 }
 ```
 
-### use in layout
+### Use in layout
 
-define a array
+Define a array
 
 ```
 <array name="emojis">
@@ -38,14 +40,14 @@ define a array
 </array>
 ```
 
-add EleLoadingView into your layout
+Add EleLoadingView into your layout. There display nothing default, so you should add icons in layout file or add later in code.
 
 ```
 <com.yiyuanliu.eleloadingview.EleLoadingView
     android:id="@+id/loading"        
 	android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:eleIconList="@drawable/food1"
+    app:eleIcon="@drawable/food1"
     app:eleJumpHeight="84dp"
 	/>
 
@@ -58,7 +60,7 @@ add EleLoadingView into your layout
 	/>
 ```
 
-### use in code
+### Use in code
 
 ```
 EleLoadingView loading = (EleLoadingView) findViewById(R.id.loading);
@@ -76,7 +78,7 @@ loading.setIcon(foods);
 //loading.setIcon(getResources().getDrawable(R.drawable.food1));
 ```
 
-### attribute
+### Attributes
 
 attribute|method|default
 ---------|------|----
