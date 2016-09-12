@@ -89,4 +89,4 @@ eleShadowMax|setShadowMax(float shadowMax)|1
 eleShadowMin|setShadowMin(float shadowMin)|0.3 
 eleShadowColor|setShadowColor(float color)|#ffa0a0a0
 eleRotate|setRotate(boolean rotate)|false
-|setDuration(long duration)|280
+ |setDuration(long duration)|280
