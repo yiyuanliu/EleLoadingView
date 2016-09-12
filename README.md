@@ -80,13 +80,13 @@ loading.setIcon(foods);
 
 attribute|method|default
 ---------|------|----
-eleIcon|setIcon(Drawable... icons)|
-eleIconList|setIcon(Drawable... icons)|
-eleIconWidth|setIconWidth(int width)<br/>setIconWidthDp(int iconWidthDp)|48dp
-eleIconHeight|setIconHeight(int height)<br/>setIconHeightDp(int heightDp)|48dp
-eleJumpHeight|setJumpHeight(int jumpHeight)<br/>setJumpHeightDp(int jumpHeightDp)|64dp
-eleShadowMax|setShadowMax(float shadowMax)|1 
-eleShadowMin|setShadowMin(float shadowMin)|0.3 
-eleShadowColor|setShadowColor(float color)|#ffa0a0a0
-eleRotate|setRotate(boolean rotate)|false
- |setDuration(long duration)|280
+eleIcon|`setIcon(Drawable... icons)`|
+eleIconList|`setIcon(Drawable... icons)`|
+eleIconWidth|`setIconWidth(int width)`<br/>`setIconWidthDp(int iconWidthDp`|48dp
+eleIconHeight|`setIconHeight(int height)`<br/>`setIconHeightDp(int heightDp)`|48dp
+eleJumpHeight|`setJumpHeight(int jumpHeight)`<br/>`setJumpHeightDp(int jumpHeightDp)`|64dp
+eleShadowMax|`setShadowMax(float shadowMax)`|1 
+eleShadowMin|`setShadowMin(float shadowMin)`|0.3 
+eleShadowColor|`setShadowColor(float color)`|#ffa0a0a0
+eleRotate|`setRotate(boolean rotate)`|false
+ |`setDuration(long duration)`|280
