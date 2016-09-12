@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EleLoadingView">
+        <attr name="eleIcon" format="reference"/>
+        <attr name="eleIconList" format="reference"/>
+        <attr name="eleIconWidth" format="dimension|reference"/>
+        <attr name="eleIconHeight" format="dimension|reference"/>
+        <attr name="eleJumpHeight" format="dimension|reference"/>
+        <attr name="eleShadowMax" format="float"/>
+        <attr name="eleShadowMin" format="float"/>
+        <attr name="eleShadowColor" format="color|reference"/>
+        <attr name="eleRotate" format="boolean"/>
+    </declare-styleable>
+</resources>

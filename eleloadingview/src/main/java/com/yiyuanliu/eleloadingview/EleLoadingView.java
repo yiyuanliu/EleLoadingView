@@ -8,8 +8,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -36,7 +34,7 @@ public class EleLoadingView extends View {
     private int mIconHeight;
     private int mIconWidth;
     private int mJumpHeight;
-    @ColorInt private int mShadowColor;
+    private int mShadowColor;
     private float mShadowMax = 1f;
     private float mShadowMin = 0.4f;
     private boolean mRotate;
@@ -112,7 +110,7 @@ public class EleLoadingView extends View {
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.EleLoadingView, defStyleAttr, 0);
 
-        int iconArrayRes = typedArray.getResourceId(R.styleable.EleLoadingView_iconList, 0);
+        int iconArrayRes = typedArray.getResourceId(R.styleable.EleLoadingView_eleIconList, 0);
         if (iconArrayRes != 0) {
             TypedArray iconArray = context.getResources().obtainTypedArray(iconArrayRes);
             List<Drawable> iconList = new ArrayList<>();
@@ -134,33 +132,33 @@ public class EleLoadingView extends View {
         }
 
         if (mIcon == null) {
-            Drawable icon = typedArray.getDrawable(R.styleable.EleLoadingView_icon);
+            Drawable icon = typedArray.getDrawable(R.styleable.EleLoadingView_eleIcon);
             setIcon(icon);
         }
 
-        int iconHeight = typedArray.getDimensionPixelSize(R.styleable.EleLoadingView_iconHeight,
+        int iconHeight = typedArray.getDimensionPixelSize(R.styleable.EleLoadingView_eleIconHeight,
                 dp2px(context, DEFAULT_Icon_SIZE_DIP));
         setIconHeight(iconHeight);
 
-        int iconWidth = typedArray.getDimensionPixelOffset(R.styleable.EleLoadingView_iconWidth,
+        int iconWidth = typedArray.getDimensionPixelOffset(R.styleable.EleLoadingView_eleIconWidth,
                 dp2px(context, DEFAULT_Icon_SIZE_DIP));
         setIconWidth(iconWidth);
 
-        int jumpHeight = typedArray.getDimensionPixelOffset(R.styleable.EleLoadingView_jumpHeight,
+        int jumpHeight = typedArray.getDimensionPixelOffset(R.styleable.EleLoadingView_eleJumpHeight,
                 dp2px(context, DEFAULT_JUMP_HEIGHT_DIP));
         setJumpHeight(jumpHeight);
 
-        @ColorRes int shadowColor = typedArray.getColor(R.styleable.EleLoadingView_shadowColor,
+        int shadowColor = typedArray.getColor(R.styleable.EleLoadingView_eleShadowColor,
                 DEFAULT_SHADOW_COLOR);
         setShadowColor(shadowColor);
 
-        float shadowMax = typedArray.getFloat(R.styleable.EleLoadingView_shadowMax, mShadowMax);
+        float shadowMax = typedArray.getFloat(R.styleable.EleLoadingView_eleShadowMax, mShadowMax);
         setShadowMax(shadowMax);
 
-        float shadowMin = typedArray.getFloat(R.styleable.EleLoadingView_shadowMin, mShadowMin);
+        float shadowMin = typedArray.getFloat(R.styleable.EleLoadingView_eleShadowMin, mShadowMin);
         setShadowMin(shadowMin);
 
-        boolean rotate = typedArray.getBoolean(R.styleable.EleLoadingView_rotate, false);
+        boolean rotate = typedArray.getBoolean(R.styleable.EleLoadingView_eleRotate, false);
         setRotate(rotate);
 
         typedArray.recycle();

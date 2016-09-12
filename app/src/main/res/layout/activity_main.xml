@@ -17,32 +17,31 @@
             android:id="@+id/loading1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:iconList="@array/emojis"
+            app:eleIconList="@array/emojis"
             android:visibility="visible"
-            app:jumpHeight="84dp"/>
+            app:eleJumpHeight="84dp"/>
 
         <com.yiyuanliu.eleloadingview.EleLoadingView
             android:layout_width="match_parent"
             android:id="@+id/loading2"
             android:layout_height="match_parent"
             android:visibility="gone"
-            app:jumpHeight="84dp"/>
+            app:eleJumpHeight="84dp"/>
 
         <com.yiyuanliu.eleloadingview.EleLoadingView
             android:id="@+id/loading3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:iconList="@array/acts"
+            app:eleIconList="@array/acts"
             android:visibility="gone"
-            app:jumpHeight="84dp"/>
+            app:eleJumpHeight="84dp"/>
 
         <com.yiyuanliu.eleloadingview.EleLoadingView
             android:id="@+id/loading4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:icon="@drawable/water"
             android:visibility="gone"
-            app:jumpHeight="84dp"/>
+            app:eleJumpHeight="84dp"/>
 
     </FrameLayout>
 
