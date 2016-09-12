@@ -170,26 +170,26 @@ public class EleLoadingView extends View {
         switch (MeasureSpec.getMode(widthMeasureSpec)) {
             case MeasureSpec.AT_MOST:
                 int maxWidth = MeasureSpec.getSize(widthMeasureSpec);
-                width = Math.min(maxWidth, mIconWidth);
+                width = Math.min(maxWidth, mIconWidth + getPaddingLeft() + getPaddingRight());
                 break;
             case MeasureSpec.EXACTLY:
                 width = MeasureSpec.getSize(widthMeasureSpec);
                 break;
             case MeasureSpec.UNSPECIFIED:
-                width = mIconWidth;
+                width = mIconWidth + getPaddingLeft() + getPaddingRight();
                 break;
         }
 
         switch (MeasureSpec.getMode(heightMeasureSpec)) {
             case MeasureSpec.AT_MOST:
                 int maxHeight = MeasureSpec.getSize(heightMeasureSpec);
-                height = Math.min(maxHeight, mIconWidth / 2 + mIconHeight + mJumpHeight);
+                height = Math.min(maxHeight, mIconWidth / 2 + mIconHeight + mJumpHeight + getPaddingTop() + getPaddingBottom());
                 break;
             case MeasureSpec.EXACTLY:
                 height = MeasureSpec.getSize(heightMeasureSpec);
                 break;
             case MeasureSpec.UNSPECIFIED:
-                height = mIconWidth / 2 + mIconHeight + mJumpHeight;
+                height = mIconWidth / 2 + mIconHeight + mJumpHeight + getPaddingTop() + getPaddingBottom();
                 break;
         }
         setMeasuredDimension(width, height);
@@ -205,8 +205,8 @@ public class EleLoadingView extends View {
         int desiredWidth = mIconWidth;
         int desiredHeight = mIconHeight + mJumpHeight + mIconHeight / 2;
 
-        int xOffset = (getWidth() - desiredWidth) / 2;
-        int yOffset = (getHeight() - desiredHeight) / 2;
+        int xOffset = (getWidth() - getPaddingRight() - getPaddingLeft() - desiredWidth) / 2;
+        int yOffset = (getHeight() - getPaddingTop() - getPaddingBottom() - desiredHeight) / 2;
 
         canvas.translate(xOffset, yOffset);
 

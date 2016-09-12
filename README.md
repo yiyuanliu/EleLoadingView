@@ -1,12 +1,14 @@
 # EleLoadingView
 
-A beautiful loading view for android inspired by Ele.me 
+A beautiful loading view for android inspired by Ele.me and dribbble
+
+![](./screenshots/screenshot.gif)
 
 ## how to use it 
 
 ### import
 
-#### Add it in your root build.gradle at the end of repositories:
+Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
 	repositories {
@@ -16,16 +18,16 @@ allprojects {
 }
 ```
 
-#### Add the dependency
+Add the dependency
 ```
 dependencies {
-	compile 'com.github.yiyuanliu:EleLoadingView:1.0'
+	compile 'com.github.yiyuanliu:EleLoadingView:1.2'
 }
 ```
 
 ### use in layout
 
-#### define a array
+define a array
 
 ```
 <array name="emojis">
@@ -36,7 +38,7 @@ dependencies {
 </array>
 ```
 
-#### add EleLoadingView into your layout
+add EleLoadingView into your layout
 
 ```
 <com.yiyuanliu.eleloadingview.EleLoadingView
@@ -73,3 +75,18 @@ loading.setIcon(foods);
 //you can set one icon too
 //loading.setIcon(getResources().getDrawable(R.drawable.food1));
 ```
+
+### attribute
+
+attribute|method|default
+---------|------|----
+eleIcon|setIcon(Drawable... icons)|
+eleIconList|setIcon(Drawable... icons)|
+eleIconWidth|setIconWidth(int width)<br/>setIconWidthDp(int iconWidthDp)|48dp
+eleIconHeight|setIconHeight(int height)<br/>setIconHeightDp(int heightDp)|48dp
+eleJumpHeight|setJumpHeight(int jumpHeight)<br/>setJumpHeightDp(int jumpHeightDp)|64dp
+eleShadowMax|setShadowMax(float shadowMax)|1 
+eleShadowMin|setShadowMin(float shadowMin)|0.3 
+eleShadowColor|setShadowColor(float color)|#ffa0a0a0
+eleRotate|setRotate(boolean rotate)|false
+|setDuration(long duration)|280
