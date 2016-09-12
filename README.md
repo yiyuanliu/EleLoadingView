@@ -6,7 +6,7 @@ A beautiful loading view for android inspired by Ele.me
 
 ### import
 
-1. Add it in your root build.gradle at the end of repositories:
+#### Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
 	repositories {
@@ -16,7 +16,7 @@ allprojects {
 }
 ```
 
-2. Add the dependency
+#### Add the dependency
 ```
 dependencies {
 	compile 'com.github.yiyuanliu:EleLoadingView:1.0'
@@ -25,7 +25,8 @@ dependencies {
 
 ### use in layout
 
-1. define a array
+#### define a array
+
 ```
 <array name="emojis">
 	<item>@drawable/emoji1</item>
@@ -34,7 +35,9 @@ dependencies {
     <item>@drawable/emoji4</item>
 </array>
 ```
-2. add EleLoadingView into your layout
+
+#### add EleLoadingView into your layout
+
 ```
 <com.yiyuanliu.eleloadingview.EleLoadingView
     android:id="@+id/loading"        
@@ -54,6 +57,7 @@ dependencies {
 ```
 
 ### use in code
+
 ```
 EleLoadingView loading = (EleLoadingView) findViewById(R.id.loading);
 
